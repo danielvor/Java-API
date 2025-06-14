@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
+
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +20,7 @@ public class TaskController {
     private TaskRepository taskRepository;
 
     // Criar uma nova task
+    @SuppressWarnings("null")
     @PostMapping
     public ResponseEntity<Task> createTask(@RequestBody Task task) {
         try {
@@ -29,6 +32,7 @@ public class TaskController {
     }
 
     // Obter todas as tasks
+    @SuppressWarnings("null")
     @GetMapping
     public ResponseEntity<List<Task>> getAllTasks() {
         try {
