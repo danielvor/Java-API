@@ -1,0 +1,45 @@
+### 1. Criar uma nova Task (sem ID - deixa o MongoDB gerar)
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Primeira Task",
+  "content": "Conteúdo da primeira task"
+}
+
+### 2. Criar Task com ID customizado
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+  "id": "task-123",
+  "title": "Task com ID custom",
+  "content": "Posso definir meu próprio ID"
+}
+
+### 3. Listar todas as Tasks
+GET http://localhost:8080/api/tasks
+
+### 4. Buscar Task por ID (substitua {id} por um ID real)
+GET http://localhost:8080/api/tasks/{id}
+
+### Exemplo com ID gerado:
+GET http://localhost:8080/api/tasks/5f9d1b2b3c8e6f1b2c3d4e5f
+
+### Exemplo com ID custom:
+GET http://localhost:8080/api/tasks/task-123
+
+### 5. Atualizar uma Task (substitua {id})
+PUT http://localhost:8080/api/tasks/{id}
+Content-Type: application/json
+
+{
+  "title": "Título atualizado",
+  "content": "Conteúdo atualizado"
+}
+
+### 6. Deletar uma Task (substitua {id})
+DELETE http://localhost:8080/api/tasks/{id}
+
+### 7. Exemplo de busca com filtro (opcional - se implementado)
+GET http://localhost:8080/api/tasks/search?title=Primeira
