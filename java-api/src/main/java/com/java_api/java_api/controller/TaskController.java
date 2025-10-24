@@ -13,6 +13,11 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = {
+    "https://danielvor.onrender.com",
+    "https://seu-app.vercel.app",
+    "http://localhost:3000"
+})
 @RequestMapping("/api/tasks")
 public class TaskController {
 
