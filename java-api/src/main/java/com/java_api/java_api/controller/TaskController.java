@@ -15,7 +15,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin(origins = {
     "https://danielvor.onrender.com",
-    "https://seu-app.vercel.app",
+    "https://danielvor.vercel.app",
     "http://localhost:3000"
 })
 @RequestMapping("/api/tasks")
